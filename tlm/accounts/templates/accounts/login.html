@@ -1,15 +1,21 @@
 {% extends "base_layout.html" %}
-{% block title %}Вход{% endblock title %}
+{% block title %}Login{% endblock title %}
 {% block content %}
-    <div class="form-container">
-        <h1>Login</h1>
-        <form class="form" action="{% url 'login' %}" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Войти</button>
-        </form>
-        <div class="form-footer">
-            Нет аккаунта? <a href="{% url 'signup' %}">Зарегистрироваться</a>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="text-center mb-4">Login</h3>
+                    <form action="{% url 'accounts:login' %}" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <small>No account? <a href="{% url 'accounts:signup' %}">Sign up</a></small>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock content %}

@@ -1,0 +1,20 @@
+{% extends "base_layout.html" %}
+{% block title %}Create article{% endblock title %}
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm mt-4">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Create article</h2>
+                    <form action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            {{ form.as_p }}
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Create article</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
