@@ -1,0 +1,15 @@
+{% extends "base_layout.html" %}
+{% block title %}Вход{% endblock title %}
+{% block content %}
+    <div class="form-container">
+        <h1>Login</h1>
+        <form class="form" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Войти</button>
+        </form>
+        <div class="form-footer">
+            Нет аккаунта? <a href="{% url 'signup' %}">Зарегистрироваться</a>
+        </div>
+    </div>
+{% endblock content %}

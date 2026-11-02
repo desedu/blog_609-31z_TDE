@@ -1,0 +1,123 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.site-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-list a, .nav-list button {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.nav-list a:hover, .nav-list button:hover { color: #0066cc; }
+
+.container, main, .article-detail, body > h1, body > p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body > h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #111;
+}
+
+body > p {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Карточки статей */
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.article__item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.article__item h2 { font-size: 1.5rem; margin-bottom: 10px; }
+.article__item a { color: #0066cc; text-decoration: none; }
+.article__item a:hover { text-decoration: underline; }
+.article__item p { color: #555; margin-bottom: 15px; }
+.article__item time { font-size: 0.9rem; color: #888; }
+
+.article-detail {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.article-detail h1 { font-size: 2.2rem; margin-bottom: 20px; color: #111; }
+.article-detail p { font-size: 1.1rem; color: #444; white-space: pre-wrap; }
+
+.article-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.form-logout {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.form-logout button {
+    background: none;
+    border: none;
+    color: #444;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+}
+
+.form-logout button:hover {
+    color: #0066cc;
+}
